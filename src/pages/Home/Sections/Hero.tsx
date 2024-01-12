@@ -16,18 +16,18 @@ export default function Hero() {
         <VStack w={"100%"} gap="20px">
           <Heading
             color="white"
-            fontSize={{ base: "36px", md: "58px" }}
-            lineHeight="1.2em"
+            fontSize={{ base: "46px", md: "58px" }}
+            lineHeight="1.1em"
             maxW={{ base: "100%", md: "90%" }}
             textAlign={"center"}
           >
-            Engage with top DJ's & become part of their{" "}
+            Increase your income by rewarding your{" "}
             <Text
               bgGradient="linear(to-l, #5bffec, #f480ff)"
               bgClip="text"
               as="span"
             >
-              inner circle
+              top fans
             </Text>
             .
           </Heading>
@@ -36,12 +36,12 @@ export default function Hero() {
             color="white"
             fontWeight="500"
             fontSize={{ base: "20px", md: "24px" }}
-            maxW={{ base: "100%", md: "80%" }}
+            maxW={{ base: "100%", md: "90%" }}
             textAlign={"center"}
           >
-            DJfan has everything you want from your favourite DJs,{" "}
-            <b>all in one place</b>. Access free & exclusive tracks, mixes,
-            videos, playlists, tutorials and more.
+            We provide a membership platform for DJs where they can connect and
+            engage with their fans and access to tools generate a consistent
+            passive income.
           </Text>
           <Box mb={{ base: "20px", md: "24px" }}>
             <CreateAccount />

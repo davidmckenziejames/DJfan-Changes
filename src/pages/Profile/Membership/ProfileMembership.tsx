@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import GoldMembership from "./GoldMembership";
 import VIPMembership from "./VIPMembership";
+import Free from "./Free";
 ////import VIPoffer from "./VIPoffer";
 
 export default function ProfileMembership() {
@@ -31,9 +32,10 @@ export default function ProfileMembership() {
         mt="40px"
         display={{ base: "none", md: "flex" }}
         width={{ base: "100%", md: "100%" }}
-        gap="80px"
-        justifyContent="center"
+        gap="10px"
+        justifyContent="space-evenly"
       >
+        <Free />
         <GoldMembership />
         <VIPMembership />
       </Flex>

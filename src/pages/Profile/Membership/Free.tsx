@@ -13,9 +13,14 @@ import {
 } from "@chakra-ui/react";
 
 import React, { useState } from "react";
-import { FaCheckCircle, FaArrowRight, FaCheck } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaTimesCircle,
+  FaArrowRight,
+  FaCheck,
+} from "react-icons/fa";
 
-export default function VIPMembership() {
+export default function Free() {
   const [isHovered, setIsHovered] = useState(false);
   const items = [
     "Access Exclusive Content",
@@ -24,6 +29,16 @@ export default function VIPMembership() {
     "Early Access to New Music",
     "Community Chat",
     "Purchase Tickets Early",
+    "Meet & Greet Invitations",
+    "Obtain Guestlist Places",
+    "Win Backstage Passes",
+    "20% Off Merch Store",
+    "Submit Demos for Feedback",
+    "Ticket & Merch Giveaways",
+    "Behind-the-Scenes Content",
+  ];
+
+  const strikeThroughItems = [
     "Meet & Greet Invitations",
     "Obtain Guestlist Places",
     "Win Backstage Passes",
@@ -43,7 +58,7 @@ export default function VIPMembership() {
             fontSize={{ base: "20px", md: "24px" }}
             color="#111111"
           >
-            VIP Membership
+            FREE
           </Text>
           <Flex justifyContent="center" gap="5px" align="center">
             <Text display="flex" alignItems="center">
@@ -59,7 +74,7 @@ export default function VIPMembership() {
                 fontSize={{ base: "28px", md: "30px" }}
                 fontWeight="600"
               >
-                10.00
+                5.00
               </Box>
             </Text>
             <Text
@@ -90,8 +105,23 @@ export default function VIPMembership() {
                 flexDirection="row"
                 alignItems="center"
               >
-                <ListIcon as={FaCheckCircle} color="#22F07E" />
-                {item}
+                <ListIcon
+                  as={
+                    strikeThroughItems.includes(item)
+                      ? FaTimesCircle
+                      : FaCheckCircle
+                  }
+                  color={
+                    strikeThroughItems.includes(item) ? "#FF7777s" : "#22F07E"
+                  }
+                />
+                {strikeThroughItems.includes(item) ? (
+                  <Box as="s" color="gray.400">
+                    {item}
+                  </Box>
+                ) : (
+                  item
+                )}
               </ListItem>
             ))}
           </List>

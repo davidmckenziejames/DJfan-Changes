@@ -52,6 +52,9 @@ import FanGuestlists from "./pages/Settings/FanGuestlists";
 import GuestlistFlow from "./pages/DJ/GuestlistFlow";
 import VIP from "./pages/Popup/VIP";
 import VIPpage from "./pages/DJ/VIP/VIPpage";
+import Demo from "./pages/Home/Demo";
+import About from "./pages/Company/About";
+import DemoConfirmation from "./pages/Company/Demo-Confirmation";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
@@ -85,6 +88,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Route path="/guestlists" element={<FanGuestlists />} />
             <Route path="/guestlistflow" element={<GuestlistFlow />} />
             <Route path="/vudu" element={<VIPpage />} />
+            <Route path="/demo" element={<Demo />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/demo-confirmation" element={<DemoConfirmation />} />
           </Routes>
         </Router>
       </ChakraProvider>

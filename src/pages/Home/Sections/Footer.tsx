@@ -42,13 +42,13 @@ export default function Footer() {
       gap="10px"
       justifyContent={{ base: "center", md: "space-between" }}
       flexDirection={{ base: "column", md: "row" }}
-      py={{ base: "20px" }}
+      py={{ base: "15px" }}
       align="center"
       px={{ base: "10px", md: "50px" }}
+      borderTop={"2px solid #fff"}
     >
       <Flex
         align="center"
-        gap="20px"
         maxW="1200px"
         flexDirection={{ base: "column", md: "row" }}
       >
@@ -58,76 +58,7 @@ export default function Footer() {
             src="https://files.djfan.app/images/djfan-beta.png"
           />
         </Link>
-        <HStack gap="15px">
-          <Box
-            bg="#ffffff"
-            as="a"
-            href="#"
-            ml={{ base: "0px", md: "10px" }}
-            display="flex"
-            alignItems="center"
-            gap="4px"
-            color="#111111"
-            px="8px"
-            py="4px"
-            borderRadius="5px"
-            fontWeight="600"
-          >
-            SIGN IN
-            <Box fontSize="14px">
-              <FaArrowRight />
-            </Box>
-          </Box>
-
-          <Menu>
-            <MenuButton as={Box} cursor="pointer">
-              <Box
-                ml={{ base: "0px", md: "10px" }}
-                display="flex"
-                alignItems="center"
-                gap="6px"
-                color="#111111"
-                background="-webkit-linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);"
-                px="8px"
-                py="4px"
-                borderRadius="5px"
-                fontWeight="600"
-              >
-                <Box fontSize="14px">
-                  <FaHeadphones />
-                </Box>
-                DJ ACCESS
-              </Box>
-            </MenuButton>
-            <MenuList minW="unset">
-              <MenuItem as="a" href="#" fontWeight="600">
-                DJ Access
-              </MenuItem>
-              <MenuItem as="a" href="#" fontWeight="600">
-                Partner Access
-              </MenuItem>
-            </MenuList>
-          </Menu>
-          <Text
-            as={Link}
-            display={"flex"}
-            alignItems={"center"}
-            fontSize={"12px"}
-            color={"white"}
-            fontWeight={"600"}
-            lineHeight={"1em"}
-            gap={"5px"}
-            cursor={"pointer"}
-            href="#"
-            _hover={{
-              color: "cyan",
-            }}
-          >
-            PARTNER PROGRAM <FaArrowRight />
-          </Text>
-        </HStack>
       </Flex>
-      <Divider mt="15px" display={{ base: "flex", md: "none" }} />
       <Flex
         alignItems="center"
         gap={{ base: "10px", md: "10px" }}
@@ -135,12 +66,6 @@ export default function Footer() {
         wrap="nowrap"
       >
         <HStack gap="20px">
-          <Link color="white" fontWeight="500" fontSize="16px" href="#">
-            Partner Program
-          </Link>
-          <Link color="white" fontWeight="500" fontSize="16px" href="#">
-            Support
-          </Link>
           <Menu>
             <MenuButton
               as={Link}
@@ -158,39 +83,10 @@ export default function Footer() {
               ))}
             </MenuList>
           </Menu>
+          <Text ml={{ base: "0px", md: "10px" }} fontSize="sm" color="white">
+            &copy; {new Date().getFullYear()} DJfan Ltd. All rights reserved.
+          </Text>
         </HStack>
-        <Menu>
-          <MenuButton as={Box} cursor="pointer">
-            <Box
-              display="none"
-              ml={{ base: "0px", md: "10px" }}
-              alignItems="center"
-              gap="4px"
-              color="#ffffff"
-              border="1px solid white"
-              px="8px"
-              py="4px"
-              borderRadius="5px"
-              fontWeight="600"
-              fontSize="14px"
-            >
-              English 🇬🇧
-              <Box fontSize="12px">
-                <FaChevronDown />
-              </Box>
-            </Box>
-          </MenuButton>
-          <MenuList minW="unset" fontSize="12px" fontWeight="500">
-            {languageOptions.map((option) => (
-              <MenuItem as="a" href="#" key={option.code}>
-                {option.label} {option.code}
-              </MenuItem>
-            ))}
-          </MenuList>
-        </Menu>
-        <Text ml={{ base: "0px", md: "10px" }} fontSize="sm" color="white">
-          &copy; {new Date().getFullYear()} DJfan Ltd. All rights reserved.
-        </Text>
       </Flex>
     </Flex>
   );

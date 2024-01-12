@@ -50,13 +50,7 @@ export default function GoldMembership() {
 
   return (
     <>
-      <Card
-        minW="350px"
-        height="100%"
-        align="center"
-        overflow="hidden"
-        borderRadius="15px"
-      >
+      <Card height="100%" align="center" overflow="hidden" borderRadius="15px">
         <CardHeader pt="25px" pb="10px" m="0" w="full" justifyContent="center">
           <Text
             fontWeight="600"
@@ -64,7 +58,7 @@ export default function GoldMembership() {
             fontSize={{ base: "20px", md: "24px" }}
             color="#111111"
           >
-            Gold Membership
+            Gold
           </Text>
           <Flex justifyContent="center" gap="5px" align="center">
             <Text display="flex" alignItems="center">
