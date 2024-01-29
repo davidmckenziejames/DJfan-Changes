@@ -6,41 +6,19 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
   Text,
-  AvatarBadge,
-  Menu,
-  MenuButton,
   Link,
-  MenuItem,
-  MenuList,
   HStack,
-  Tag,
 } from "@chakra-ui/react";
-import { BiLike, BiTrash } from "react-icons/bi";
 import {
-  FiShare,
-  FiEye,
-  FiMoreVertical,
   FiHeart,
-  FiSend,
 } from "react-icons/fi";
 import PostCarousel from "../Profile/Feed/Gallery/PostCarousel";
 import {
-  FaComment,
-  FaCommentAlt,
   FaHeart,
   FaRegCommentAlt,
 } from "react-icons/fa";
 
-type PostMenuProps = {
-  icon: React.ElementType;
-  label: string;
-};
 
 export default function Comments() {
   return (
