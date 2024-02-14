@@ -55,42 +55,23 @@ import VIPpage from "./pages/DJ/VIP/VIPpage";
 import Demo from "./pages/Home/Demo";
 import About from "./pages/Company/About";
 import DemoConfirmation from "./pages/Company/Demo-Confirmation";
+import SupportThankyous from "./pages/Auth/SupportThankyou";
+import SupportThankyou from "./pages/Auth/SupportThankyou";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
       <ChakraProvider theme={theme}>
         <Router>
           <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/login" element={<Signin />} />
-            <Route path="/profile" element={<Profile />} />
             <Route path="/onboarding" element={<Onboarding />} />
+            <Route path="/" element={<Profile />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/profile/offline" element={<ProfileOffline />} />
             <Route path="/product" element={<Product />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/singlepost" element={<Explore />} />
-            <Route path="/billing" element={<Billing />} />
-            <Route path="/legal/privacy" element={<Privacy />} />
-            <Route path="/legal/terms" element={<Terms />} />
-            <Route path="/legal/cookies" element={<Cookies />} />
-            <Route path="/reviews" element={<Reviews />} />
-            <Route path="/chat" element={<Chat />} />
-            <Route path="/q" element={<Questions />} />
-            <Route path="/tq" element={<TextQuestions />} />
-            <Route path="/vip" element={<WelcomeVIPoffer />} />
-            <Route path="/part" element={<ParnterSignUp />} />
-            <Route path="/postpage" element={<ParnterSignUp />} />
-            <Route path="/inbox" element={<DMchat />} />
-            <Route path="/not" element={<NotificationsPage />} />
-            <Route path="/events" element={<ManageEvents />} />
-            <Route path="/guestlists" element={<FanGuestlists />} />
-            <Route path="/guestlistflow" element={<GuestlistFlow />} />
-            <Route path="/vudu" element={<VIPpage />} />
-            <Route path="/demo" element={<Demo />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/demo-confirmation" element={<DemoConfirmation />} />
+            <Route path="/supportthankyou" element={<SupportThankyou />} />
           </Routes>
         </Router>
       </ChakraProvider>

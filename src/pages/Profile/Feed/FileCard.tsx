@@ -28,7 +28,7 @@ const PostMenu = ({ icon, label }: PostMenuProps) => (
   </MenuItem>
 );
 
-export default function ProductCard() {
+export default function FileCard() {
   return (
     <Card
       border="2px solid cyan"
@@ -94,7 +94,7 @@ export default function ProductCard() {
               variant="solid"
               colorScheme="purple"
             >
-              View Song
+              View Product
             </Button>
           </Box>
         </Flex>

@@ -24,9 +24,12 @@ import {
   FaPlay,
   FaPlayCircle,
   FaImages,
+  FaBlog,
+  FaEdit,
 } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import ProfileBlog from "./ProfileBlog";
 interface CustomTabProps {
   icon: React.ElementType;
   text: string;
@@ -106,6 +109,7 @@ export default function ProfileMenu() {
           }}
         >
           <CustomTab icon={FaHome} text="Posts" />
+          <CustomTab icon={FaEdit} text="Blog" />
           <CustomTab icon={FaUser} text="Biography" />
           <CustomTab icon={FaMusic} text="Tracks" />
           <CustomTab icon={FaImages} text="Photos" />
@@ -118,6 +122,9 @@ export default function ProfileMenu() {
         <TabPanels>
           <TabPanel>
             <ProfilePosts />
+          </TabPanel>
+          <TabPanel>
+            <ProfileBlog />
           </TabPanel>
           <TabPanel bg="black">
             <ProfileBio />
