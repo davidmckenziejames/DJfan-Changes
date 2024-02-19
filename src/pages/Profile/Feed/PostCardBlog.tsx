@@ -1,39 +1,14 @@
 import {
-  Avatar,
   Flex,
   Box,
   useColorModeValue,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
   Text,
   Image,
-  AvatarBadge,
-  Menu,
-  MenuButton,
-  Link,
   MenuItem,
   Stack,
   Heading,
-  MenuList,
   HStack,
 } from "@chakra-ui/react";
-import { BiEdit, BiTrash } from "react-icons/bi";
-import { FiShare, FiEye, FiMoreVertical } from "react-icons/fi";
-import PostActions from "./PostActions";
-
-type PostMenuProps = {
-  icon: React.ElementType;
-  label: string;
-};
-
-const PostMenu = ({ icon, label }: PostMenuProps) => (
-  <MenuItem py="10px" aria-label={label}>
-    <Box as={icon} size="14px" mr="8px" />
-    <Text>{label}</Text>
-  </MenuItem>
-);
 
 export default function PostCardBlog() {
   return (
@@ -43,38 +18,35 @@ export default function PostCardBlog() {
       border="2px solid black"
       borderRadius="15px"
     >
-      <Image
-        w={"100%"}
-        h="200px"
-        objectFit="cover"
-        src={
-          "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-        }
-        alt="Example"
-      />
+      <Flex position="relative">
+        <Image
+          w={"100%"}
+          h="200px"
+          objectFit="cover"
+          src={
+            "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          }
+          alt="Example"
+        />
+        <Text
+          position="absolute"
+          bg="#7d5aeb"
+          color="#ffffff"
+          textTransform="uppercase"
+          fontWeight="700"
+          fontSize="16px"
+          lineHeight="1em"
+          top="10px"
+          right="10px"
+          px="8px"
+          py="5px"
+          borderRadius="10px"
+        >
+          CAREER
+        </Text>
+      </Flex>
 
-      <Stack px="10px" py="15px">
-        <HStack justify="space-between">
-          <Text
-            color="#7d5aeb"
-            textTransform={"uppercase"}
-            fontWeight={800}
-            fontSize={"sm"}
-            letterSpacing={1.1}
-          >
-            CAREER TIPS
-          </Text>
-          <Text
-            color="#111"
-            textTransform={"uppercase"}
-            fontWeight={600}
-            fontSize={"sm"}
-            letterSpacing={1.1}
-          >
-            14/02/2024
-          </Text>
-        </HStack>
-
+      <Stack px="20px" py="20px">
         <Heading
           // eslint-disable-next-line react-hooks/rules-of-hooks
           color={useColorModeValue("gray.700", "white")}

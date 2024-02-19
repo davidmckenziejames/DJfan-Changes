@@ -57,6 +57,7 @@ import About from "./pages/Company/About";
 import DemoConfirmation from "./pages/Company/Demo-Confirmation";
 import SupportThankyous from "./pages/Auth/SupportThankyou";
 import SupportThankyou from "./pages/Auth/SupportThankyou";
+import Blog from "./pages/Blog/Blog";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
@@ -72,6 +73,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/singlepost" element={<Explore />} />
             <Route path="/supportthankyou" element={<SupportThankyou />} />
+            <Route path="/blog" element={<Blog />} />
           </Routes>
         </Router>
       </ChakraProvider>

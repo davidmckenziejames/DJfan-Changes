@@ -1,5 +1,4 @@
-import { Flex, Button, Box } from "@chakra-ui/react";
-import PostCardAudio from "./Feed/PostCardAudio";
+import { Flex, Box } from "@chakra-ui/react";
 import PostCardBlog from "./Feed/PostCardBlog";
 
 export default function ProfileBlog() {
