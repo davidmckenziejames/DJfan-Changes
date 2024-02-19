@@ -1,15 +1,11 @@
 import {
   Flex,
-  Box,
   useColorModeValue,
   Text,
   Image,
-  MenuItem,
   Stack,
   Heading,
-  HStack,
 } from "@chakra-ui/react";
-
 export default function PostCardBlog() {
   return (
     <Flex
