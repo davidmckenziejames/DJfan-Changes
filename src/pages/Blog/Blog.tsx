@@ -1,37 +1,6 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  Heading,
-  HStack,
-  Tooltip,
-  Flex,
-  Stack,
-  Icon,
-  Image,
-  Text,
-  Modal,
-  useDisclosure,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-} from "@chakra-ui/react";
-import {
-  FiShare,
-  FiUnlock,
-  FiUser,
-  FiHeadphones,
-  FiPlay,
-  FiArrowLeft,
-} from "react-icons/fi";
-import { FaCheckCircle, FaEnvelope } from "react-icons/fa";
-
+import { Box, Heading, Flex, Icon, Image, Text } from "@chakra-ui/react";
+import { FiArrowLeft } from "react-icons/fi";
 export default function Blog() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const avatarSizes = { base: "100px", sm: "150px" };
   return (
     <Flex align="center" flexDirection="column" w="100%">
       <Flex
